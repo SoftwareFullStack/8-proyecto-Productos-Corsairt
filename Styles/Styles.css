@@ -1,0 +1,379 @@
+/* VARIABLES */
+:root {
+  --colorTexto: #1d1d1f;
+  --colorTextoClaro: #86868b;
+  --colorEnlaces: #06c;
+  --colorBackground: #fafafa;
+}
+
+/* ESTILOS PARA SCROLL */
+.contRoot::-webkit-scrollbar{
+    width: 10px;
+}
+
+.contRoot::-webkit-scrollbar-thumb{
+    background-color: var(--colorTexto);
+}
+
+
+/* ESTYLOS GENERALES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+
+.contRoot{
+    background-color: var(--colorBackground);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none
+}
+
+h1, h2, h3{
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--colorTexto);
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--colorTextoClaro);
+    margin-top: 0.5em;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.contTxt{
+    flex-direction: column;
+}
+
+/* ESTILOS GENERALES DEL GRID */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    height: 100%;
+}
+
+.grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span5{
+    grid-column: span 5;
+}
+
+.span6{
+    grid-column: span 6;
+}
+
+.span7{
+    grid-column: span 7;
+}
+
+.span9{
+    grid-column: span 9;
+}
+
+.span12{
+    grid-column: span 12;
+}
+
+
+/* ESTILOS GENERALES ENLACE INFO */
+.enlaceInfo{
+    font-size: 21px;
+    margin-top: 30px;
+    color: var(--colorEnlaces);
+}
+
+.enlaceInfo:hover{
+    text-decoration: underline;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* MENU DE NAVEGACION  */
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}
+
+.enlaces{
+    position: relative;
+    height: 100%;
+    padding: 0 22px;
+    margin: 0 auto;
+    max-width: 980px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlaces__img{
+    width: 25px;
+}
+
+.enlaces__a{
+    color: #FFF;
+    font-size: 14px;
+    padding: 0 10px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.enlaces__a--efecto:hover{
+    opacity: 1;
+}
+
+
+
+/* SECCION HEADER */
+.teclado{
+    width: 100%;
+    height: calc(100vh - 44px);
+    margin: 44px 0 0 0;
+    background-color: #FFF;
+}
+
+.tecladoImg__img{
+    width: 80%;
+    height: 600px;
+}
+
+.contTxtTeclado{
+    padding: 30px 0 0 0;
+    justify-content: flex-end !important;
+}
+
+.tecladoImg__img{
+    align-items: flex-end !important;
+}
+
+
+/* SECCION SERVICIOS */
+.servicios{
+    background-image: url("../IMG/serviciosImg2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.servicios::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.servicios__grid{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.contenedor{
+    flex-direction: column;
+    z-index: 1;
+}
+
+.servicios__img{
+    width:  70%;
+    margin: 25px 0;
+}
+
+.contTxtServicios--change{
+    width: 60%;
+    text-align: center;
+}
+
+.servicios__h2{
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+/* SECCION PRODUCTOS */
+
+/* AURICULARES */
+.auriculares{
+    background-color: #FFF;
+}
+
+.auriculares__img{
+    height: 85%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.contTxtAuriculares--change{
+    grid-column: 2 / 4;
+    align-items: flex-start;
+}
+
+
+/* RATONES */
+.ratones{
+    background-color: #FFF;
+    padding: 30px 50px 0 50px;
+}
+
+.ratones__img{
+    width: 85%;
+}
+
+.ratones__img2{
+    width: 150px;
+}
+
+
+/* CHASIS */
+.chasis{
+    background-color: #FFF;
+}
+
+.chasis__img{
+    height: 85%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.contTxtChasis--change{
+    grid-column: 2 / 4;
+    align-items: flex-start;
+}
+
+
+/* MEMORIA RAM & ACCESORIOS */
+.ramAccesorios{
+    padding: 30px;
+}
+
+.contTxtRamAccesorios--change{
+    background-color: #000;
+}
+
+.contTxtRamAccesorios--change2{
+    background-color: #FFF;
+}
+
+.texto{
+    height: 50%;
+    width: 50%;
+    padding: 60px 0 0 0;
+    text-align: center;
+    flex-direction: column;
+}
+
+.imagen{
+    height: 100%;
+    align-items: flex-end;
+}
+
+.icono{
+    width: 100%;
+    height: 100px;
+}
+
+.ramAccesorios__h3{
+    color: #FFF;
+}
+
+.ramAccesorios__h3--color{
+    color: #000;
+}
+
+.enlaceInfo--change{
+    margin: 10px 0 30px 0;
+}
+
+
+/* SECCION VENTILADORES */
+.ventiladores{
+    background-color: #FFF;
+    padding: 50px 0;
+}
+
+.ventiladores__img{
+    width: 55%;
+}
+
+.ventiladores__h1{
+    font-size: 56px;
+}
+
+.ventiladores__h2{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.ventiladores__h3{
+    color: var(--colorTextoClaro);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+
+/* FOOTER */
+.piePagina{
+    width: 100%;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piePagina__img{
+    width: 30px;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+.piePagina__img:hover{
+    opacity: 1;
+}
